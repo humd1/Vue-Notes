@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CookieClicker from '@/views/CookieClicker.vue'
+import UserCreate from '@/views/UserCreate.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +9,13 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: CookieClicker,
+    },
+    {
+      path: '/usercreate',
+      name: 'usercreate',
+      component: UserCreate,
     }
+
   ],
 })
 
