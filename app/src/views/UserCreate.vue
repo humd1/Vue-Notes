@@ -7,7 +7,7 @@
         <input type ="password" v-model="user.password"/>
         <button type="submit">Login</button>
     </form>
-    <h2 v-if ="loggedin"> {{user.username}} logged in!</h2>
+    <h2 v-if ="loggedIn"> {{user.username}} logged in!</h2>
     <h2 v-else>log in pls</h2> 
     </div>
 </template>
@@ -16,15 +16,16 @@
 import {reactive, ref} from 'vue'
 const user = reactive({username: '', password: ''})
 
-const loggedin = ref(false)
+const loggedIn = ref(false)
 
 function login(user){
     console.log(user)
-    loggedin.value = true
+    loggedIn.value = true
 }
 
 </script>
 
 <style lang="scss" scoped>
+
 
 </style>
