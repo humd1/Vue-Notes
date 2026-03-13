@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <Routerlink to="/viewlists"></Routerlink>
-    <router-view/>
-  </div>
+    <div>
+        <h2>hello</h2>
+    </div>
 </template>
 
 <script setup>
