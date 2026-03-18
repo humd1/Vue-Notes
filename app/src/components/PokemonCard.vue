@@ -1,12 +1,14 @@
 <template>
+    <router-link :to="pkmnPath">
     <div class="card">
         <h2>{{ pokemon.name }}</h2>
         <h3>{{ id }}</h3>
     </div>
+    </router-link>
 </template>
 
 <script setup>
-
+import { computed } from 'vue'
 const props = defineProps({
     pokemon: {
         type: Object,
@@ -18,6 +20,9 @@ const props = defineProps({
      }
 })
 
+const pkmnPath = computed(()=>{
+    return `/pkmn/${props.pokemon.name}`
+})
 </script>
 
 <style scoped>
